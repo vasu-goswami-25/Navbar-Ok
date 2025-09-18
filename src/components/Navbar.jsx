@@ -2,9 +2,10 @@
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { FaUser, FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
-import navLogo from "../assets/nav-logo.png";
+// import navLogo from "../assets/nav-logo.png";
 import bigLogo from "../assets/big-logo.png";
 import bgImage from "../assets/background.png";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,18 +24,22 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       }}
     >
       {/* Navbar */}
-      <div className="absolute top-0 left-0 w-full z-20">
+      <div className="absolute top-0 left-0  w-full z-20">
         <div className="container mx-auto flex justify-between items-center px-6 py-6 md:px-20">
-          {/* Logo */}
-          <img
+          {/*LEFT: Logo */}
+          <h1 className="text-2xl font-bold">
+           <span style={{ color: "#6334B9" }}>Amoha</span> Codes
+          </h1>
+
+          {/* <img
             src={navLogo}
             alt="Logo"
             className="h-16 md:h-20 transition-all duration-300"
             style={{ filter: darkMode ? "invert(1)" : "invert(0)" }}
-          />
+          /> */}
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Center Nav Links (Desktop) */}
+          <div className="hidden md:flex flex-1 justify-center items-center">
             <ul className="flex gap-6 font-inter text-lg">
               {["home", "about", "practice", "courses", "internship", "contact"].map(
                 (item) => (
@@ -52,8 +57,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 )
               )}
             </ul>
+          </div>  
 
-            {/* Dark Mode Toggle */}
+            {/* Right: Dark Mode + User Icon */}
+          <div className="hidden md:flex items-center gap-4 ">
             <div
               className={`w-12 h-6 rounded-full flex items-center p-1 cursor-pointer transition-all ${
                 darkMode ? "bg-yellow-400" : "bg-purple-700"
@@ -79,7 +86,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               <FaUser size={18} />
             </button>
           </div>
-
+        
+      
           {/* Mobile Hamburger */}
           <button
             className="md:hidden text-2xl"
@@ -166,12 +174,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           className="mt-0 mb-0 w-4/5 md:w-3/5 lg:w-2/5 max-w-[900px] h-auto mx-auto transition-all duration-300"
           style={{ filter: darkMode ? "invert(1)" : "invert(0)" }}
         />
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mt-2 mb-0">
-          Welcome to Amoha Codes
+        <h2 className="text-2xl sm:text-3xl md:text-5xl  -mt-20 mb-0">
+         Welcome to <span style={{ color: "#6334B9" }}>Amoha</span>
         </h2>
-        <span className="font-ibarra text-base sm:text-lg md:text-2xl text-gray-600 dark:text-gray-300 mt-1">
+        <span className="font-ibarra text-base sm:text-lg md:text-2xl text-gray-600 dark:text-gray-300 mt-0">
           "Empowering Dreams Through Education"
         </span>
+        {/* Start Learning Button */}
+        <Link
+         to="/practice"
+         className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-200"
+         >
+         Start Learning
+        </Link>
       </div>
 
       {/* Modal */}

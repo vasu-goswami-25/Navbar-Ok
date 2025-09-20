@@ -41,7 +41,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           {/* Center Nav Links (Desktop) */}
           <div className="hidden md:flex flex-1 justify-center items-center">
             <ul className="flex gap-6 font-inter text-lg">
-              {["home", "about", "practice", "courses", "internship", "contact"].map(
+              {["home", "about", "practice", "courses", "careers", "contact"].map(
                 (item) => (
                   <li key={item}>
                     <ScrollLink
@@ -110,7 +110,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
             {/* Links */}
             <ul className="flex flex-col items-center gap-6 font-inter text-lg">
-              {["home", "about", "practice", "courses", "internship", "contact"].map(
+              {["home", "about", "practice", "courses", "careers", "contact"].map(
                 (item) => (
                   <li key={item}>
                     <ScrollLink
@@ -166,27 +166,32 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       {/* Hero Section */}
       <div
         id="home"
-        className="flex flex-col items-center justify-center text-center min-h-screen px-4 py-10 mb-20"
+        className="flex flex-col items-center justify-center text-center min-h-screen px-4 py-10 mb-0"
       >
         <img
           src={bigLogo}
           alt="Big Logo"
-          className="mt-0 mb-0 w-4/5 md:w-3/5 lg:w-2/5 max-w-[900px] h-auto mx-auto transition-all duration-300"
+          className="-mt-20 mb-0 w-4/5 md:w-3/5 lg:w-2/5 max-w-[900px] h-auto mx-auto transition-all duration-300"
           style={{ filter: darkMode ? "invert(1)" : "invert(0)" }}
         />
         <h2 className="text-2xl sm:text-3xl md:text-5xl  -mt-20 mb-0">
-         Welcome to <span style={{ color: "#6334B9" }}>Amoha</span>
+         Welcome to <span style={{ color: "#6334B9" }}>Amoha Codes</span>
         </h2>
         <span className="font-ibarra text-base sm:text-lg md:text-2xl text-gray-600 dark:text-gray-300 mt-0">
           "Empowering Dreams Through Education"
         </span>
         {/* Start Learning Button */}
         <Link
-         to="/practice"
-         className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-200"
-         >
-         Start Learning
+          to="/practice"
+          className="px-6 py-3 font-semibold rounded-lg shadow-lg hover:shadow-xl transition duration-300 mt-8"
+          style={{
+            backgroundColor: "#6334B9",
+            color: "#fff",
+          }}
+        >
+          Start Learning
         </Link>
+
       </div>
 
       {/* Modal */}

@@ -4,18 +4,22 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import { useState } from "react";
 
+
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
     <BrowserRouter>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-
-
-
+    
       {/* About section */}
       <About darkMode={darkMode} />
-{/* Footer Section */}
+
+      {/* WhyChooseAmoha */}
+      {/* <WhyChooseAmoha /> */}
+     
+      {/* Footer Section */}
       <Footer />
      
     </BrowserRouter>

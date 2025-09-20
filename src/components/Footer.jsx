@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaLinkedin, FaFacebook, FaInstagram,  } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -14,17 +16,6 @@ const Footer = () => {
             <p>Moradabad, 244001</p>
             <p>Phone: +91 9760564433</p>
             <p>Email: amohacodes@gmail.com</p>
-            <div className="flex space-x-4 mt-4">
-              <a href="https://www.linkedin.com/company/amoha-codes/posts/?feedView=all" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="https://x.com/" aria-label="Twitter">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 22.4L11.5 12.8L19.4 1.5H16.4L10.5 9.7L5.3 1.5H1.4L9.1 12.1L1.2 22.4H4.2L10.1 14.1L15.3 22.4H18.9ZM6.2 3.1L5 3.1L14.6 21.6H15.9L6.2 3.1Z"></path></svg>
-              </a>
-              <a href="https://www.instagram.com/amoha_codes_/" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
-              </a>
-            </div>
           </div>
 
           {/* Useful Links Section */}
@@ -33,7 +24,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#" className="hover:underline">Home</a></li>
               <li><a href="#" className="hover:underline">About us</a></li>
-              <li><a href="#" className="hover:underline">Courses</a></li>
+              <li><a href="#" className="hover:underline">Careers</a></li>
               <li><a href="#" className="hover:underline">Terms of service</a></li>
               <li><a href="#" className="hover:underline">Privacy policy</a></li>
             </ul>
@@ -43,18 +34,34 @@ const Footer = () => {
           <div className="space-y-3">
             <h3 className="text-xl font-bold">Our Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:underline">Web Development</a></li>
+              <li><a href="#" className="hover:underline">Programming Languages</a></li>
               <li><a href="#" className="hover:underline">Data Structure and Algorithm</a></li>
               <li><a href="#" className="hover:underline">Competitive Programming</a></li>
-              <li><a href="#" className="hover:underline">Programming Languages</a></li>
+              <li><a href="#" className="hover:underline">System Design</a></li>
               <li><a href="#" className="hover:underline">Career Counseling</a></li>
             </ul>
           </div>
         </div>
 
-        {/* Copyright Bottom Line */}
-        <div className="border-t border-white/20 mt-8 pt-4 text-center text-sm">
-          © Copyright <strong>Amoha Codes</strong>. All Rights Reserved
+        {/* Copyright and Social Icons */}
+        <div className="flex justify-between items-center border-t border-white/20 mt-8 pt-4">
+            <div className="text-sm">
+                © Copyright <strong>Amoha Codes</strong>. All Rights Reserved
+            </div>
+            <div className="flex space-x-4">
+                {/* LinkedIn */}
+                <a href="https://www.linkedin.com/company/amoha-codes/posts/?feedView=all" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin size={22} className="hover:text-purple-400 transition-colors duration-200" />
+                </a>
+                {/* Facebook */}
+                <a href="https://www.facebook.com/share/p/1MFzyWTwpJ/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                    <FaFacebook size={22} className="hover:text-purple-400 transition-colors duration-200" />
+                </a>
+                {/* Instagram */}
+                <a href="https://www.instagram.com/amoha_codes_/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram size={22} className="hover:text-purple-400 transition-colors duration-200" />
+                </a>
+            </div>
         </div>
       </div>
     </footer>

@@ -59,11 +59,11 @@ const Testimonials = ({ darkMode }) => {
   return (
     <div
       className={`container mx-auto px-4 py-16 transition-colors duration-500 ${
-        darkMode ? "bg-gray text-white" : "bg-white text-black"
+        darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
       }`}
     >
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl font-bold">Testimonials</h2>
+        <h2 className="text-2xl font-bold">Our Learners</h2>
         <div className="flex space-x-2">
           <button
             onClick={handlePrev}

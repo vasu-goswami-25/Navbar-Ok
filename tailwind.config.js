@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: "class", // 👈 dark mode ko class based banaya
+  darkMode: "class", 
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",

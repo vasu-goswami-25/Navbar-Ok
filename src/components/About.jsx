@@ -6,7 +6,8 @@ import Testimonials from "./Testimonial";
 import MyTeam from "./MyTeam";
 import FAQ from "./FrequentlyAskedQuestion";
 import CallToAction from "./CallToAction";
-import WhyChooseAmoha from "../components/WhyChooseAmoha"; 
+// import WhyChooseAmoha from "../components/WhyChooseAmoha"; 
+
 
 
 const About = ({ darkMode }) => {
@@ -172,7 +173,7 @@ const About = ({ darkMode }) => {
         {/* <section className="max-w-6xl mx-auto px-1 py-2">
           <WhyChooseAmoha darkMode={darkMode} />
         </section> */}
-        <WhyChooseAmoha />
+        {/* <WhyChooseAmoha /> */}
 
         <section className="max-w-6xl mx-auto px-1 py-2">
           <Testimonials darkMode={darkMode} />
@@ -188,6 +189,9 @@ const About = ({ darkMode }) => {
           <FAQ darkMode={darkMode} />
           <CallToAction darkMode={darkMode} />
         </section>
+
+
+
       </div>
     </section>
   );

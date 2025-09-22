@@ -1,5 +1,6 @@
 import React from 'react';
 import WhyChooseAmoha from "../components/WhyChooseAmoha"
+import Careers from "../components/Careers"
 
 // Mock data for the featured courses
 const featuredCourses = [
@@ -57,7 +58,7 @@ const featuredCourses = [
 // Component for a single course card
 const CourseCard = ({ course }) => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md border border-purple-700 dark:border-purple-500 overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl flex flex-col w-82">
-    <img src={course.image} alt={course.title} className="w-full h-48 object-cotain mr-4 p-4 rounded-2xl" />
+    <img src={course.image} alt={course.title} className="w-full h-50 object-cotain mr-4 p-4 rounded-2xl" />
     <div className="p-4 ">
       <div className="text-sm font-medium text-purple-800 dark:text-gray-400 mb-2">{course.category}</div>
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{course.title}</h3>
@@ -102,7 +103,13 @@ export default function App() {
             ))}
           </div>
         </section>
+
+         {/* IN THIS PLACE ADD CAREERS CALL */}
+
+        <Careers/>
       </main>
     </div>
+
+    
   );
 }

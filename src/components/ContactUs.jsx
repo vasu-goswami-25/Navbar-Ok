@@ -120,7 +120,7 @@ const App = () => {
                             <div className="text-center">
                                 <button
                                     type="submit"
-                                    className="bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 hover:bg-purple-800"
+                                    className="bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 hover:bg-purple-800"
                                 >
                                     Submit
                                 </button>
